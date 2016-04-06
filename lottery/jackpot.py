@@ -1,4 +1,4 @@
-#-*- coding: UTF-8 -*- 
+#-*- coding: UTF-8 -*-
 
 from common import scraping
 
@@ -31,5 +31,5 @@ def get():
                 "money": money
             })
         sequence += 1
-
+        print money
     return {'jackpots': jackpots}
