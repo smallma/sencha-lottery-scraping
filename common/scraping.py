@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 
 def getHtml(url):
     html = urllib2.urlopen(url).read()
-    soup = BeautifulSoup(html, fromEncoding="GB18030")
+    soup = BeautifulSoup(html, from_encoding="GB18030")
     return soup
 
 
@@ -52,5 +52,5 @@ def exeRestApi(url, method, headers, formData):
         request.add_header(header.key, header.value)
     request.get_method = lambda: method
     html = urllib2.urlopen(request)
-    soup = BeautifulSoup(html, fromEncoding="GB2312")
+    soup = BeautifulSoup(html, from_encoding="GB2312")
     return soup

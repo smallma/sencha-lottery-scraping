@@ -58,8 +58,8 @@ def main():
 	register(APPLICATION_ID, REST_API_KEY)
 
 
-	schedule.every(1).minutes.do(_getJackpot)
-	schedule.every(1).minutes.do(_getLatestAward)
+	schedule.every(0).minutes.do(_getJackpot)
+	schedule.every(0).minutes.do(_getLatestAward)
 
 	while True:
 	    schedule.run_pending()
